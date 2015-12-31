@@ -1,0 +1,40 @@
+﻿#show_name{
+     position:absolute;
+        top:200px;
+        left:120px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+#show_grade{
+     position:absolute;
+        top:200px;
+        left:220px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+
+#show_rest{
+
+     position:absolute;
+        top:200px;
+        left:320px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+
+#Course_List{
+     position:absolute;
+        top:300px;
+        left:120px;
+    	width:60px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+        color:red;
+}
