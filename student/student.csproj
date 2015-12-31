@@ -76,6 +76,7 @@
     <Content Include="select.aspx" />
     <Content Include="showcourse.aspx" />
     <Content Include="style\css\index.css" />
+    <Content Include="style\css\login.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

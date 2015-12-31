@@ -24,12 +24,13 @@ namespace student
             string tmp_course_grade = Add_course_grade.Text.ToString().Trim();
             int course_grade = Convert.ToInt32(tmp_course_grade);
             string tmp_course_class = Add_course_grade.Text.ToString().Trim();
-
+            string tmp_course_rest = Add_course_rest.Text.ToString().Trim();
+            int course_rest = Convert.ToInt32(tmp_course_rest);
             string connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
             MySqlConnection conn = new MySqlConnection(connection);
 
             //string sql = "INSERT INTO course (course_id,course_name,course_grade,course_class) VALUES ('''+       ?course_id + ''',''' + ?course_name + ''','''+ ?course_teacher+ ''',''' + ?couse_grade + ''')";
-            string sql = "INSERT INTO course (course_id,course_name,course_grade,course_class) VALUES ( '" + course_id + "','" + course_name + "','" + course_grade + "','" + tmp_course_class  + "')";
+            string sql = "INSERT INTO course (course_id,course_name,course_grade,course_class,course_rest) VALUES ( '" + course_id + "','" + course_name + "','" + course_grade + "','" + tmp_course_class + "','" + course_rest  + "')";
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             cmd.ExecuteNonQuery();

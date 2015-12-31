@@ -19,8 +19,8 @@ namespace student
             }
             else
             {
-               // Response.Redirect("404.html");
-                Response.Write(student_id);
+                Response.Redirect("404.html");
+               // Response.Write(student_id);
             }
             if (Session[student_id] == null)
             {
@@ -35,10 +35,28 @@ namespace student
                 }
                 else
                 {
-                    //Response.Redirect("404.html");
-                    Response.Write(course_id);
+                    Response.Redirect("404.html");
+                   // Response.Write(course_id);
                 }
+                // 先验证是否已经选择这门课！！如果已经选择，跳转到选课页面
+                string init_connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
+                MySqlConnection init_conn = new MySqlConnection(init_connection);
+                string init_sqlQuery = "SELECT * FROM select_course WHERE course_id  = " + course_id;
+                MySqlCommand init_comm = new MySqlCommand(init_sqlQuery, init_conn);
+                init_conn.Open();
+                MySqlDataReader init_dr = init_comm.ExecuteReader();
+                string tmp_student_id = "";
+                while (init_dr.Read())
+                {
+                    tmp_student_id = init_dr.GetString(2);
+                }
+                if (tmp_student_id == student_id)
+                {
+                    Response.Write("你已经选择此门课程了");
+                }
+                init_conn.Close();
 
+                // 如果还没选择此门课程
                 // 将选课的数据插入到select_course的表中
                 string connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
                 MySqlConnection conn = new MySqlConnection(connection);

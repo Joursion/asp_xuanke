@@ -17,6 +17,8 @@
         <asp:TextBox ID="Add_course_teacher" runat="server"></asp:TextBox>
         <asp:Label ID="Show_course_grade" runat="server" Text="课程学分"></asp:Label>
         <asp:TextBox ID="Add_course_grade" runat="server"></asp:TextBox>
+        <asp:Label ID="Show_course_rest" runat="server" Text="课程总量"></asp:Label>
+        <asp:TextBox ID="Add_course_rest" runat="server"></asp:TextBox>
         <asp:Button ID="Add_confirm" runat="server" Text="确认" OnClick="Add_confirm_Click" />
         <asp:Label ID="Add_success" runat="server" Text=""></asp:Label>
     </form>

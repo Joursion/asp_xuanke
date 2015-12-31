@@ -6,13 +6,13 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link rel="stylesheet" href="style/css/login.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-         <div id="wrong_message" class="login-msg error" runat="server" visible="false">
-                              
-                                <asp:Label runat="server" ID="errmsg"  Text="ddd"></asp:Label>
-                </div>
+         <div id="wrong_message" class="login-msg error" runat="server" visible="false">            
+            <asp:Label runat="server" ID="errmsg"  Text="ddd"></asp:Label>
+         </div>
         <asp:Label ID="Login_id_edit" runat="server" Text="ID"></asp:Label>
         <asp:TextBox ID="Login_id" runat="server"></asp:TextBox>
          <asp:Label ID="Login_pwd_edit" runat="server" Text="密码"></asp:Label>
