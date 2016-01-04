@@ -31,24 +31,6 @@ namespace student {
         protected global::System.Web.UI.WebControls.Table Course_List;
         
         /// <summary>
-        /// Good 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow Good;
-        
-        /// <summary>
-        /// TableRow1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow TableRow1;
-        
-        /// <summary>
         /// Select_course_name 控件。
         /// </summary>
         /// <remarks>
@@ -83,5 +65,41 @@ namespace student {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.TableRow Select_select;
+        
+        /// <summary>
+        /// show_course_had_select 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label show_course_had_select;
+        
+        /// <summary>
+        /// Course_had_select 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Table Course_had_select;
+        
+        /// <summary>
+        /// Course_had_name 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow Course_had_name;
+        
+        /// <summary>
+        /// Course_choose_to_quit 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TableRow Course_choose_to_quit;
     }
 }

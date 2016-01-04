@@ -61,6 +61,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add_grade.aspx" />
+    <Content Include="query_grade.aspx" />
+    <Content Include="quit_select.aspx" />
+    <Content Include="show_course_state.aspx" />
+    <Content Include="Student_head.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,8 +80,10 @@
     <Content Include="login.aspx" />
     <Content Include="select.aspx" />
     <Content Include="showcourse.aspx" />
+    <Content Include="style\css\head.css" />
     <Content Include="style\css\index.css" />
     <Content Include="style\css\login.css" />
+    <Content Include="test_for_head.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +93,13 @@
     </Compile>
     <Compile Include="addcourse.aspx.designer.cs">
       <DependentUpon>addcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_grade.aspx.cs">
+      <DependentUpon>add_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_grade.aspx.designer.cs">
+      <DependentUpon>add_grade.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -102,6 +116,20 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="query_grade.aspx.cs">
+      <DependentUpon>query_grade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="query_grade.aspx.designer.cs">
+      <DependentUpon>query_grade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="quit_select.aspx.cs">
+      <DependentUpon>quit_select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quit_select.aspx.designer.cs">
+      <DependentUpon>quit_select.aspx</DependentUpon>
+    </Compile>
     <Compile Include="select.aspx.cs">
       <DependentUpon>select.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +143,27 @@
     </Compile>
     <Compile Include="showcourse.aspx.designer.cs">
       <DependentUpon>showcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="show_course_state.aspx.cs">
+      <DependentUpon>show_course_state.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="show_course_state.aspx.designer.cs">
+      <DependentUpon>show_course_state.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student_head.Master.cs">
+      <DependentUpon>Student_head.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student_head.Master.designer.cs">
+      <DependentUpon>Student_head.Master</DependentUpon>
+    </Compile>
+    <Compile Include="test_for_head.aspx.cs">
+      <DependentUpon>test_for_head.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test_for_head.aspx.designer.cs">
+      <DependentUpon>test_for_head.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

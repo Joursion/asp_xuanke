@@ -12,31 +12,35 @@
     <form id="form1" runat="server">
 
         <div id="show_name"> 课程名称</div>
-         <div id="show_grade">课程学分</div>
-         <div id="show_rest">课程剩余数</div>
+         <div id="show_grade">学分</div>
+         <div id="show_rest">余量</div>
 
           <asp:table  ID="Course_List" runat="server" 
-                 Height="200px" Width="794px">
-        
-                <asp:TableRow ID="Good" runat="server"  >
-                 
-                </asp:TableRow>
-         <asp:TableRow ID="TableRow1" runat="server"  >
-            <%-- <asp:Image ID="View_img" runat="server"></asp:Image>--%>
-                </asp:TableRow>
-               <asp:TableRow ID="Select_course_name" runat="server" >
-                 
-                </asp:TableRow>
-         <asp:TableRow ID="Select_course_grade" runat="server"  >
-                
-                </asp:TableRow>
-         <asp:TableRow ID="Select_course_rest" runat="server"  >
-                 
-                </asp:TableRow>
+                 Height="200px" Width="1000px">
+               <asp:TableRow ID="Select_course_name" runat="server"  Width="200px">
+                  </asp:TableRow>
+
+               <asp:TableRow ID="Select_course_grade" runat="server" Width="100px">
+                 </asp:TableRow>
+
+              <asp:TableRow ID="Select_course_rest" runat="server" Width="100px"  >
+                 </asp:TableRow>
+
               <asp:TableRow ID="Select_select" runat="server" >
-                 
                 </asp:TableRow>
+
             </asp:table>
+        <asp:Label ID="show_course_had_select" runat="server" Text="已经选修的课程"></asp:Label>
+        <asp:table  ID="Course_had_select" runat="server" 
+                 Height="200px" Width="1000px" >
+
+               <asp:TableRow ID="Course_had_name" runat="server"  Width="200px">
+                  </asp:TableRow>
+
+              <asp:TableRow ID="Course_choose_to_quit" runat="server" >
+                </asp:TableRow>
+
+         </asp:table>
     </form>
 </body>
 </html>

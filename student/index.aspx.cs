@@ -19,16 +19,16 @@ namespace student
             }
 
             // 测试，先不验证登录
-            if (Session[id] != null)
+            if (Session[id] == null)
             {
-                //Response.Write("请登录");
+                Response.Write("请登录");
             }
-            else if (Session[id] == null)
+            else 
             {
-
                 string connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
                 MySqlConnection conn = new MySqlConnection(connection);
-                string sqlQuery = "SELECT * FROM  course";//HERE good_name  like '" + id + "%'";
+                //string sqlQuery = "SELECT * FROM  course";//HERE good_name  like '" + id + "%'";
+                string sqlQuery = "SELECT * from course where course.course_id not in ( select course.course_id from course, select_course where course.course_id = select_course.course_id and select_course.student_id = " + id + ")";
                 MySqlCommand comm = new MySqlCommand(sqlQuery, conn);
                 conn.Open();
                 MySqlDataReader dr = comm.ExecuteReader();
@@ -43,7 +43,6 @@ namespace student
                     tc2.Text = dr.GetString(2);
                     int course_rest = dr.GetInt32(4);
                     tc3.Text = course_rest.ToString();//dr.GetString(4);
-                    Response.Write(course_rest);
                     if (course_rest > 0)
                     {
                         HyperLink hl = new HyperLink();
@@ -55,7 +54,7 @@ namespace student
                     }
                     else
                     {
-                        tc4.Text = "";
+                        tc4.Text = "已满";
                     }
                     //将单元格添加到行中
                     tr.Cells.Add(tc1);
@@ -66,6 +65,32 @@ namespace student
                 }
                 dr.Close();
                 conn.Close();
+
+
+
+                // 显示已经选修的课程
+                string had_select_connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
+                MySqlConnection had_select_conn = new MySqlConnection(had_select_connection);
+                string had_select_sqlQuery = "SELECT course.course_name FROM  course ,select_course  WHERE  select_course.student_id =" + id + " and select_course.course_id = course.course_id";
+                MySqlCommand had_select_comm = new MySqlCommand(had_select_sqlQuery, had_select_conn);
+                had_select_conn.Open();
+                MySqlDataReader had_select_dr = had_select_comm.ExecuteReader();
+                while(had_select_dr.Read())
+                {
+                    TableRow tr = new TableRow();
+                    TableCell tc1 = new TableCell();
+                    TableCell tc2 = new TableCell();
+                    tc1.Text = had_select_dr.GetString(0);
+                    HyperLink h2 = new HyperLink();
+                    //构建单元格中的内容
+                    h2.NavigateUrl = "select.aspx?stu=" + id + "&course=" + had_select_dr.GetString(0);
+                    h2.Text = "我要退选";
+                    tc2.Controls.Add(h2);
+                    tr.Cells.Add(tc1);
+                    tr.Cells.Add(tc2);
+                    Course_had_select.Rows.Add(tr);
+                }
+                had_select_conn.Close();
             }
         }
     }
