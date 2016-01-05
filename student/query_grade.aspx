@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
+<body style="width: 691px; margin-left: 176px">
     <form id="form1" runat="server">
     <div>
     <asp:table  ID="Show_query_grade" runat="server" 
-                 Height="200px" Width="500px">
+                 Height="200px" Width="452px">
                <asp:TableRow ID="query_grade_name" runat="server"  Width="100px">
                   </asp:TableRow>
 

@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
+
 
 namespace student
 {
@@ -17,9 +19,21 @@ namespace student
 
         protected void Login_login_Click(object sender, EventArgs e)
         {
+
+            //Regex rx = new Regex(@"d\+",
+            // RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            String zipregex = @"^\d{6}$";
+
             string userName = Login_id.Text.ToString().Trim();
             string userPwd = Login_pwd.Text.ToString().Trim();
-             Session[userName] = false;     
+             Session[userName] = false;
+
+             bool flag = Regex.IsMatch(userName, zipregex);
+             if (!flag)
+            {
+                errmsg.Text = "ID 格式不正确";
+                Login_id.Text = "";
+            }
             if (userName == "" && userPwd == "")
             {
                 wrong_message.Visible = true;
@@ -36,7 +50,7 @@ namespace student
                 errmsg.Text = "请输入密码";
             }
             //用户名和密码错误 提示(你输入的密码和账户名不匹配，是否忘记密码或忘记会员名)
-            if (userName != "" && userPwd != "")
+            if (Regex.IsMatch(userName, zipregex) && userPwd != "")
             {
                 string connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
                 MySqlConnection conn = new MySqlConnection(connection);
@@ -101,7 +115,7 @@ namespace student
                 if (tmp_psw == userPwd)
                 {
                     Session[userName] = true;
-                    Response.Redirect("index.aspx" + "?stu=" + userName +"");
+                    Response.Redirect("add_grade" + "?teacher=" + userName +"");
                 }
                 else
                 {

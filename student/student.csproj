@@ -62,8 +62,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add_grade.aspx" />
+    <Content Include="indext.aspx" />
     <Content Include="query_grade.aspx" />
     <Content Include="quit_select.aspx" />
+    <Content Include="shownews.aspx" />
     <Content Include="show_course_state.aspx" />
     <Content Include="Student_head.Master" />
     <None Include="Web.Debug.config">
@@ -101,12 +103,20 @@
     <Compile Include="add_grade.aspx.designer.cs">
       <DependentUpon>add_grade.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BaseClass.cs" />
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="indext.aspx.cs">
+      <DependentUpon>indext.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="indext.aspx.designer.cs">
+      <DependentUpon>indext.aspx</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -143,6 +153,13 @@
     </Compile>
     <Compile Include="showcourse.aspx.designer.cs">
       <DependentUpon>showcourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="shownews.aspx.cs">
+      <DependentUpon>shownews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="shownews.aspx.designer.cs">
+      <DependentUpon>shownews.aspx</DependentUpon>
     </Compile>
     <Compile Include="show_course_state.aspx.cs">
       <DependentUpon>show_course_state.aspx</DependentUpon>

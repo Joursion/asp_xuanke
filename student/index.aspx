@@ -10,7 +10,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-
+<asp:Button ID="index_select" runat="server" Text="我要选课" OnClick="index_select_Click" />
+        <asp:Button ID="index_show" runat="server" Text="我的选课" OnClick="index_show_Click" />
+        <asp:Button ID="index_query" runat="server" Text="成绩查询" OnClick="index_query_Click" />
         <div id="show_name"> 课程名称</div>
          <div id="show_grade">学分</div>
          <div id="show_rest">余量</div>

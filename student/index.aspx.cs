@@ -21,7 +21,7 @@ namespace student
             // 测试，先不验证登录
             if (Session[id] == null)
             {
-                Response.Write("请登录");
+                Response.Redirect("login.aspx");
             }
             else 
             {
@@ -92,6 +92,57 @@ namespace student
                 }
                 had_select_conn.Close();
             }
+        }
+
+        protected void index_select_Click(object sender, EventArgs e)
+        {
+            string id = "";
+            if (Request.QueryString["stu"] != null)
+            {
+                id = Request.QueryString["stu"];
+            }
+
+            // 测试，先不验证登录
+            if (Session[id] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
+
+            Response.Redirect("index.aspx?stu=" + id);
+        }
+
+        protected void index_show_Click(object sender, EventArgs e)
+        {
+            string id = "";
+            if (Request.QueryString["stu"] != null)
+            {
+                id = Request.QueryString["stu"];
+            }
+
+            // 测试，先不验证登录
+            if (Session[id] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
+
+            Response.Redirect("show_course.aspx?stu=" + id);
+        }
+
+        protected void index_query_Click(object sender, EventArgs e)
+        {
+            string id = "";
+            if (Request.QueryString["stu"] != null)
+            {
+                id = Request.QueryString["stu"];
+            }
+
+            // 测试，先不验证登录
+            if (Session[id] == null)
+            {
+                Response.Redirect("login.aspx");
+            }
+
+            Response.Redirect("query_grade.aspx?stu=" + id);
         }
     }
 }

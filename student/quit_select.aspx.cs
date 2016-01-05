@@ -11,6 +11,21 @@ namespace student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string student_id = "";
+            if (Request.QueryString["stu"] != null)
+            {
+                student_id = Request.QueryString["stu"];
+            }
+            else
+            {
+                Response.Redirect("404.html");
+                // Response.Write(student_id);
+            }
+            if (Session[student_id] == null)
+            {
+                Response.Write("请登录");
+            }
+
 
         }
     }
