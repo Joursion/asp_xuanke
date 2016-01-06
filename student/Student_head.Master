@@ -19,8 +19,11 @@
     </div>
         
         <asp:Label ID="head_show_name" runat="server" Text="Label"></asp:Label>
-        <asp:Button ID="head_log" runat="server" Text="Button" />
-
+        <asp:Button ID="head_log_out" runat="server" Text="登出" />
+        <asp:Button ID="head_for_select" runat="server" Text="我要选课" OnClick="head_for_select_Click" />
+         <asp:Button ID="head_for_query" runat="server" Text="我的选课" OnClick="head_for_query_Click" />
+         <asp:Button ID="head_for_quit" runat="server" Text="成绩查询" OnClick="head_for_quit_Click" />
+         
     </form>
 </body>
 </html>

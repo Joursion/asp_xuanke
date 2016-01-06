@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace student
 {
-    public partial class shownews : System.Web.UI.Page
+    public partial class select_course : System.Web.UI.Page
     {
         BaseClass baseclass1 = new BaseClass();
         string student_id;
@@ -34,23 +34,23 @@ namespace student
             objPds.PageSize = 5;
             int curpage = Convert.ToInt32(this.LabelPage.Text);
             objPds.CurrentPageIndex = curpage - 1;
-            if(objPds.CurrentPageIndex < 0)
+            if (objPds.CurrentPageIndex < 0)
             {
                 objPds.CurrentPageIndex = 0;
             }
-            if(objPds.PageCount == 1)
+            if (objPds.PageCount == 1)
             {
                 LinkButtonPrev.Enabled = false;
                 LinkButtonNext.Enabled = false;
             }
             else
             {
-                if(curpage == 1)
+                if (curpage == 1)
                 {
                     LinkButtonPrev.Enabled = false;
                     LinkButtonNext.Enabled = true;
                 }
-                if(curpage == objPds.PageCount)
+                if (curpage == objPds.PageCount)
                 {
                     LinkButtonNext.Enabled = false;
                     LinkButtonPrev.Enabled = true;
@@ -58,7 +58,7 @@ namespace student
             }
 
             this.LableTotalPage.Text = Convert.ToString(objPds.PageCount);
-          //  GridView1.DataNavigateUrlFields = "";
+            //  GridView1.DataNavigateUrlFields = "";
             GridView1.DataSource = objPds;
             GridView1.DataBind();
         }
@@ -104,7 +104,7 @@ namespace student
             GridViewRow row = btn.Parent.Parent as GridViewRow;
             string tmp_course_id = row.Cells[0].Text;//获得第一个单元格的值   
             string tmp_rest = row.Cells[3].Text;
-            if(tmp_rest == "0")
+            if (tmp_rest == "0")
             {
                 Response.Write("<script>alert('该课程人数已满！');</script>");
             }
@@ -131,8 +131,9 @@ namespace student
                 {
                     string insert_sql = "INSERT INTO select_course (course_id,student_id,grade) VALUES ( '" + tmp_course_id + "','" + student_id + "','" + 0 + "')";
                     baseclass1.execsql(insert_sql);
+                    Response.Redirect("select_course.aspx?stu=" + student_id);
                 }
-                
+
             }
         }
     }

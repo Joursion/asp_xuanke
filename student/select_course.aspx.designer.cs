@@ -10,16 +10,7 @@
 namespace student {
     
     
-    public partial class Student_head {
-        
-        /// <summary>
-        /// head 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+    public partial class select_course {
         
         /// <summary>
         /// form1 控件。
@@ -31,57 +22,66 @@ namespace student {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ContentPlaceHolder1 控件。
+        /// GridView1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// head_show_name 控件。
+        /// LabelPage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label head_show_name;
+        protected global::System.Web.UI.WebControls.Label LabelPage;
         
         /// <summary>
-        /// head_log_out 控件。
+        /// LableTotalPage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_log_out;
+        protected global::System.Web.UI.WebControls.Label LableTotalPage;
         
         /// <summary>
-        /// head_for_select 控件。
+        /// LinkButtonFirst 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_select;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonFirst;
         
         /// <summary>
-        /// head_for_query 控件。
+        /// LinkButtonPrev 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_query;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonPrev;
         
         /// <summary>
-        /// head_for_quit 控件。
+        /// LinkButtonNext 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_quit;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonNext;
+        
+        /// <summary>
+        /// LinkButtonLast 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonLast;
     }
 }

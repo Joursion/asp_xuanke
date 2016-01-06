@@ -65,6 +65,7 @@
     <Content Include="indext.aspx" />
     <Content Include="query_grade.aspx" />
     <Content Include="quit_select.aspx" />
+    <Content Include="select_course.aspx" />
     <Content Include="shownews.aspx" />
     <Content Include="show_course_state.aspx" />
     <Content Include="Student_head.Master" />
@@ -85,7 +86,8 @@
     <Content Include="style\css\head.css" />
     <Content Include="style\css\index.css" />
     <Content Include="style\css\login.css" />
-    <Content Include="test_for_head.aspx" />
+    <Content Include="style\css\select_.css" />
+    <Content Include="test_for_student_head.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -147,6 +149,13 @@
     <Compile Include="select.aspx.designer.cs">
       <DependentUpon>select.aspx</DependentUpon>
     </Compile>
+    <Compile Include="select_course.aspx.cs">
+      <DependentUpon>select_course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="select_course.aspx.designer.cs">
+      <DependentUpon>select_course.aspx</DependentUpon>
+    </Compile>
     <Compile Include="showcourse.aspx.cs">
       <DependentUpon>showcourse.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -175,12 +184,12 @@
     <Compile Include="Student_head.Master.designer.cs">
       <DependentUpon>Student_head.Master</DependentUpon>
     </Compile>
-    <Compile Include="test_for_head.aspx.cs">
-      <DependentUpon>test_for_head.aspx</DependentUpon>
+    <Compile Include="test_for_student_head.aspx.cs">
+      <DependentUpon>test_for_student_head.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test_for_head.aspx.designer.cs">
-      <DependentUpon>test_for_head.aspx</DependentUpon>
+    <Compile Include="test_for_student_head.aspx.designer.cs">
+      <DependentUpon>test_for_student_head.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="shownews.aspx.cs" Inherits="student.shownews" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="select_course.aspx.cs" Inherits="student.select_course" %>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,7 @@
                 <asp:BoundField DataField="course_teacher" HeaderText="任课教师"  ItemStyle-Width="100px" />
                 <asp:TemplateField>   
                    <ItemTemplate>   
-                           <asp:Button    ID="Button_select"    runat="server"    OnClick="Button_select_Click"   Text="选课"    />   
+                           <asp:Button  ID="Button_select"  runat="server"  OnClick="Button_select_Click"   Text="选课"    />   
                    </ItemTemplate>   
                 </asp:TemplateField>   
                

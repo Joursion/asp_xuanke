@@ -108,7 +108,7 @@ namespace student
                 Response.Redirect("login.aspx");
             }
 
-            Response.Redirect("index.aspx?stu=" + id);
+            Response.Redirect("select_course.aspx?stu=" + id);
         }
 
         protected void index_show_Click(object sender, EventArgs e)
