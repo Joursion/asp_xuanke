@@ -7,6 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
      <link rel="stylesheet" href="style/css/head.css" />
+     <link rel="stylesheet" href="style/css/select_.css" />
+     <link rel="stylesheet" href="style/css/show_my_course_grade.css" />
+     <link rel="stylesheet" href="style/css/student_head.css" />
+     <link rel="stylesheet" href="style/css/index.css" />
+     <link rel="stylesheet" href="style/css/show_my_course.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -17,13 +22,15 @@
         
         </asp:ContentPlaceHolder>
     </div>
-        
-        <asp:Label ID="head_show_name" runat="server" Text="Label"></asp:Label>
-        <asp:Button ID="head_log_out" runat="server" Text="登出" />
-        <asp:Button ID="head_for_select" runat="server" Text="我要选课" OnClick="head_for_select_Click" />
-         <asp:Button ID="head_for_query" runat="server" Text="我的选课" OnClick="head_for_query_Click" />
-         <asp:Button ID="head_for_quit" runat="server" Text="成绩查询" OnClick="head_for_quit_Click" />
-         
+        <div id="stubackground" >
+        <asp:Label ID="head_show_name" runat="server" Text=""></asp:Label>
+        <asp:Button ID="head_log_out" runat="server" Text="登出" OnClick="head_log_out_Click" />
+        <asp:Button ID="head_for_select_course" runat="server" Text="我要选课" OnClick="head_for_select_course_Click"  />
+         <asp:Button ID="head_for_show_my_course" runat="server" Text="我的选课" OnClick="head_for_show_my_course_Click"  />
+         <asp:Button ID="head_for_show_my_course_grade" runat="server" Text="成绩查询" OnClick="head_for_show_my_course_grade_Click" />
+         <asp:Button ID="head_for_show_my" runat="server" Text="我的信息" OnClick="head_for_show_my_Click" />
+            <asp:Button ID="head_for_pingjiao" runat="server" Text="我要评教" OnClick="head_for_pingjiao_Click"/>
+         </div>
     </form>
 </body>
 </html>

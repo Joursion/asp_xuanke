@@ -13,57 +13,66 @@ namespace student {
     public partial class add_grade {
         
         /// <summary>
-        /// form1 控件。
+        /// GridView3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.GridView GridView3;
         
         /// <summary>
-        /// Add_grade_list 控件。
+        /// LabelPage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Table Add_grade_list;
+        protected global::System.Web.UI.WebControls.Label LabelPage;
         
         /// <summary>
-        /// add_grade_course_name 控件。
+        /// LableTotalPage 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow add_grade_course_name;
+        protected global::System.Web.UI.WebControls.Label LableTotalPage;
         
         /// <summary>
-        /// add_grade_course_student 控件。
+        /// LinkButtonFirst 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow add_grade_course_student;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonFirst;
         
         /// <summary>
-        /// add_grade_course_grade 控件。
+        /// LinkButtonPrev 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow add_grade_course_grade;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonPrev;
         
         /// <summary>
-        /// add_grade_course_btn 控件。
+        /// LinkButtonNext 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TableRow add_grade_course_btn;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonNext;
+        
+        /// <summary>
+        /// LinkButtonLast 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonLast;
     }
 }

@@ -69,7 +69,7 @@ namespace student
             }
         }
 
-        public string Reader(String strSql, int flag)
+        public string Readstr(String strSql, int flag)
         {
             DataSet ds = new DataSet();
             String str;

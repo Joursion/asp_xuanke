@@ -10,21 +10,18 @@ using MySql.Data.MySqlClient;
 
 namespace student
 {
-    public partial class select_course : System.Web.UI.Page
+    public partial class select_course1 : System.Web.UI.Page
     {
         BaseClass baseclass1 = new BaseClass();
         string student_id;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["stu"] != null)
-            {
-                student_id = Request.QueryString["stu"];
-            }
+            student_id = Request.QueryString["stu"];
             if (!Page.IsPostBack)
-                getGoods();
+               getCourses();
         }
 
-        private void getGoods()
+        private void getCourses()
         {
             string strsql = "SELECT * from course where course.course_id not in ( select course.course_id from course, select_course where course.course_id = select_course.course_id and select_course.student_id = " + student_id + ")";
             DataTable dt = baseclass1.ReadTable(strsql);
@@ -68,25 +65,25 @@ namespace student
         protected void LinkButtonFirst_Click(object sender, EventArgs e)
         {
             this.LabelPage.Text = "1";
-            getGoods();
+            getCourses();
         }
 
         protected void LinkButtonPrev_Click(object sender, EventArgs e)
         {
             this.LabelPage.Text = Convert.ToString(int.Parse(this.LabelPage.Text) - 1);
-            getGoods();
+            getCourses();
         }
 
         protected void LinkButtonNext_Click(object sender, EventArgs e)
         {
             this.LabelPage.Text = Convert.ToString(int.Parse(this.LabelPage.Text) + 1);
-            getGoods();
+            getCourses();
         }
 
         protected void LinkButtonLast_Click(object sender, EventArgs e)
         {
             this.LabelPage.Text = this.LabelPage.Text;
-            getGoods();
+            getCourses();
         }
 
         //protected void Button_select_Click(object sender, EventArgs e)
@@ -125,7 +122,6 @@ namespace student
                 {
                     Response.Write("你已经选择此门课程了");
                     init_conn.Close();
-
                 }
                 else
                 {

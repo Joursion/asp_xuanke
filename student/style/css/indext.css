@@ -1,0 +1,23 @@
+﻿#ContentPlaceHolder1_teacher_gg_content
+{
+        position:absolute;
+    top:323px;
+    left:200px;
+    width:500px;
+    height:400px;
+     font-size:large;
+    padding-top:20px;
+    padding-left:10px;
+     border:1px solid ;
+}
+
+#ContentPlaceHolder1_teacher_gg_title
+{
+        position:absolute;
+    top:290px;
+    left:200px;
+    width:100px;
+    height:30px;
+     font-size:large;
+     border:1px;
+}

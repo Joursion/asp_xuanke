@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Teacher.master.cs" Inherits="student.Teacher" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+      <link rel="stylesheet" href="style/css/tea_head.css" />
+    <link rel="stylesheet" href="style/css/indext.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+           <div id="teabackground" >
+
+         <asp:Label ID="taecher_show_name" runat="server" Text="Label"></asp:Label>
+        <asp:Button ID="teacher_log_out" runat="server" Text="登出" OnClick="teacher_log_out_Click"  />
+        <asp:Button ID="teacher_add_course" runat="server" Text="添加课程" OnClick="teacher_add_course_Click"  />
+         <asp:Button ID="teacher_add_grade" runat="server" Text="录入分数" OnClick="teacher_add_grade_Click"   />
+         </div>
+
+    </div>
+    </form>
+</body>
+</html>

@@ -7,72 +7,99 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace student {
+namespace Student {
     
     
-    public partial class select_course1 {
+    public partial class evaluate {
         
         /// <summary>
-        /// GridView1 控件。
+        /// form1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LabelPage 控件。
+        /// select_course 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPage;
+        protected global::System.Web.UI.WebControls.DropDownList select_course;
         
         /// <summary>
-        /// LableTotalPage 控件。
+        /// evaluate_level 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LableTotalPage;
+        protected global::System.Web.UI.WebControls.Table evaluate_level;
         
         /// <summary>
-        /// LinkButtonFirst 控件。
+        /// course_id 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonFirst;
+        protected global::System.Web.UI.WebControls.TableRow course_id;
         
         /// <summary>
-        /// LinkButtonPrev 控件。
+        /// course_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonPrev;
+        protected global::System.Web.UI.WebControls.TableRow course_name;
         
         /// <summary>
-        /// LinkButtonNext 控件。
+        /// teacher_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonNext;
+        protected global::System.Web.UI.WebControls.TableRow teacher_name;
         
         /// <summary>
-        /// LinkButtonLast 控件。
+        /// level1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonLast;
+        protected global::System.Web.UI.WebControls.DropDownList level1;
+        
+        /// <summary>
+        /// level2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList level2;
+        
+        /// <summary>
+        /// level3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList level3;
+        
+        /// <summary>
+        /// level4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList level4;
     }
 }

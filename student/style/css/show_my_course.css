@@ -1,0 +1,48 @@
+﻿#show_my_course
+{
+    position:absolute;
+    top:160px;
+    width:100%;
+    height:100%;
+}
+
+#ContentPlaceHolder1_GridView2
+{
+    position:absolute;
+    top:140px;
+    left:100px;
+}
+
+#show_show_course_id
+{
+
+         position:absolute;
+         top:110px;
+        left:100px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+
+#show_show_course_name
+{
+         position:absolute;
+         top:110px;
+        left:430px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+
+#show_show_grade
+{
+         position:absolute;
+         top:110px;
+        left:720px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}

@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace student
 {
-    public partial class query_grade : System.Web.UI.Page
+    public partial class show_my_course_grade : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

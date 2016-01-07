@@ -114,8 +114,17 @@ namespace student
                 }
                 if (tmp_psw == userPwd)
                 {
-                    Session[userName] = true;
-                    Response.Redirect("add_grade" + "?teacher=" + userName +"");
+                    string tmp_choose = userName.Substring(0, 1);
+                    Response.Write(tmp_choose);
+                    if (tmp_choose == "3")
+                    {
+                        Session[userName] = true;
+                        Response.Redirect("indext.aspx" + "?teacher=" + userName + "");
+                    }
+                    else if (tmp_choose == "6")
+                    {
+                        Response.Redirect("indexa.aspx" + "?admin=" + userName + "");
+                    }
                 }
                 else
                 {

@@ -49,3 +49,20 @@
         top:340px;
         right:320px;
 }
+body
+  { 
+  background: #abede1 url(loginback.jpg) no-repeat fixed top;
+  }
+#Image1
+{
+    position:absolute;
+    top:180px;
+    left:260px;
+}
+
+#errmsg
+{
+     position:absolute;
+        top:380px;
+        right:320px;
+}

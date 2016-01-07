@@ -1,0 +1,43 @@
+﻿#query_grade_name{
+
+}
+
+#query_grade_grade{
+
+}
+
+#ContentPlaceHolder1_Show_query_grade{
+    position:absolute;
+    top:140px;
+    left:100px;
+}
+
+
+#show_course_name{
+
+     position:absolute;
+         top:200px;
+        left:120px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+
+#show_course_grade
+{
+     position:absolute;
+         top:200px;
+        left:500px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:900 bold;
+}
+
+#ContentPlaceHolder1_show_tips
+{
+     position:absolute;
+         top:500px;
+           left:500px;
+}

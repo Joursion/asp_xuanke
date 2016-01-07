@@ -19,10 +19,10 @@ namespace student
                 id = Request.QueryString["stu"];
             }
 
-            // 测试，先不验证登录
+             //测试，先不验证登录
             if (Session[id] == null)
             {
-                Response.Write("请登录");
+                Response.Redirect("login.aspx");
             }
 
             if(Session[id] != null)
@@ -36,25 +36,40 @@ namespace student
                 MySqlDataReader dr = comm.ExecuteReader();
                 while(dr.Read())
                 {
-                    head_show_name.Text = dr.GetString(0);
+                    head_show_name.Text = "欢迎您！ "+ dr.GetString(0); 
                 }
                 conn.Close();
             }
         }
 
-        protected void head_for_select_Click(object sender, EventArgs e)
+        protected void head_for_select_course_Click(object sender, EventArgs e)
         {
-            Response.Redirect("test_for_student_head.aspx?stu=" + id);
+            Response.Redirect("select_course.aspx?stu=" + id);
         }
 
-        protected void head_for_query_Click(object sender, EventArgs e)
+        protected void head_for_show_my_course_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("show_my_course.aspx?stu=" + id);
         }
 
-        protected void head_for_quit_Click(object sender, EventArgs e)
+        protected void head_for_show_my_course_grade_Click(object sender, EventArgs e)
         {
+            Response.Redirect("show_my_course_grade.aspx?stu=" + id);
+        }
 
+        protected void head_log_out_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
+
+        protected void head_for_show_my_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("student_info.aspx?stu=" + id);
+        }
+
+        protected void head_for_pingjiao_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("evaluate.aspx?stu=" + id);
         }
     }
 }

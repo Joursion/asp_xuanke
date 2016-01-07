@@ -1,0 +1,104 @@
+﻿#show_course_id{
+     position:absolute;
+        top:60px;
+        left:100px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+    text-align: left;
+}
+
+#show_course_name{
+     position:absolute;
+        top:60px;
+        left:210px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+}
+
+#show_teacher_name{
+     position:absolute;
+        left:310px;
+        top:60px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+}
+
+#beikeqingkuang{
+    position:absolute;
+        left:410px;
+        top:60px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+}
+
+#jiaoxuetaidu{
+    position:absolute;
+        left:510px;
+        top:60px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+}
+
+#jiangkeneirong{
+    position:absolute;
+        left:610px;
+        top:60px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+}
+
+#zuoyepiyue{
+    position:absolute;
+        left:710px;
+        top:60px;
+    	width:100px;
+    	height:50px;
+        font-size:large;
+        font-weight:800 bold;
+}
+
+#form{
+    position:absolute;
+         top:80px;
+        left:100px;
+}
+
+#lv1{
+    position:absolute;
+         top:120px;
+        left:410px;
+}
+
+#lv2{
+    position:absolute;
+         top:120px;
+        left:510px;
+}
+
+#lv3{
+    position:absolute;
+         top:120px;
+        left:610px;
+}
+
+#lv4{
+    position:absolute;
+         top:120px;
+        left:710px;
+}
+
+table td{
+    width:100px
+}

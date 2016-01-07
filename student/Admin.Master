@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="student.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+           <asp:Label ID="show_admin_name" runat="server" Text=""></asp:Label>
+        <asp:Button ID="admin_add_student" runat="server" Text="添加学生"  />
+        <asp:Button ID="admin_add_teacher" runat="server" Text="添加教师职工"   />
+        <asp:Button ID="admin_add_announcement" runat="server" Text="发布公告" OnClick="admin_add_announcement_Click" />
+        <asp:Button ID="admin_log_out" runat="server" Text="登出"  />
+
+    </div>
+    </form>
+</body>
+</html>

@@ -10,96 +10,114 @@
 namespace student {
     
     
-    public partial class Student_head {
+    public partial class add_course {
         
         /// <summary>
-        /// head 控件。
+        /// Show_course_id 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label Show_course_id;
         
         /// <summary>
-        /// form1 控件。
+        /// Add_course_id 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox Add_course_id;
         
         /// <summary>
-        /// ContentPlaceHolder1 控件。
+        /// Show_course_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Label Show_course_name;
         
         /// <summary>
-        /// head_show_name 控件。
+        /// Add_course_name 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label head_show_name;
+        protected global::System.Web.UI.WebControls.TextBox Add_course_name;
         
         /// <summary>
-        /// head_log_out 控件。
+        /// Show_course_teacher 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_log_out;
+        protected global::System.Web.UI.WebControls.Label Show_course_teacher;
         
         /// <summary>
-        /// head_for_select_course 控件。
+        /// Add_course_teacher 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_select_course;
+        protected global::System.Web.UI.WebControls.TextBox Add_course_teacher;
         
         /// <summary>
-        /// head_for_show_my_course 控件。
+        /// Show_course_grade 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_show_my_course;
+        protected global::System.Web.UI.WebControls.Label Show_course_grade;
         
         /// <summary>
-        /// head_for_show_my_course_grade 控件。
+        /// Add_course_grade 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_show_my_course_grade;
+        protected global::System.Web.UI.WebControls.TextBox Add_course_grade;
         
         /// <summary>
-        /// head_for_show_my 控件。
+        /// Show_course_rest 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_show_my;
+        protected global::System.Web.UI.WebControls.Label Show_course_rest;
         
         /// <summary>
-        /// head_for_pingjiao 控件。
+        /// Add_course_rest 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button head_for_pingjiao;
+        protected global::System.Web.UI.WebControls.TextBox Add_course_rest;
+        
+        /// <summary>
+        /// Add_confirm 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Add_confirm;
+        
+        /// <summary>
+        /// Add_success 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Add_success;
     }
 }

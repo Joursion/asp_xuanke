@@ -1,0 +1,56 @@
+﻿body {
+}
+.img {
+    height: 157px;
+    width: 124px;
+}
+.box1 {
+    width: 43px;
+    float: left;
+    height: 25px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+.box1 {
+    clear: both;
+}
+.box2 {
+    width: 486px;
+    float: right;
+    height: 176px;
+    position: absolute;
+    top: 19px;
+    left: 189px;
+}
+.box3 {
+    position: absolute;
+    margin-top: 20px;
+    top: 199px;
+    left: 12px;
+    width: 212px;
+    height: 111px;
+}
+.box4 {
+    position: absolute;
+    top: 216px;
+    left: 258px;
+    width: 417px;
+    height: 114px;
+    right: 170px;
+}
+.btn {
+    position: absolute;
+    margin-top: 10px;
+    top: 350px;
+    left: 600px;
+    width: 39px;
+    height: 21px;
+}
+#Button3{
+    position:absolute;
+    top: 360px;
+    left: 496px;
+    width: 81px;
+    height: 25px;
+}
+        

@@ -4,60 +4,126 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace student
 {
     public partial class add_grade : System.Web.UI.Page
     {
+        string teacher_id = "";
+        BaseClass baseclass1 = new BaseClass();
         protected void Page_Load(object sender, EventArgs e)
         {
-            string id = "";
-            if (Request.QueryString["teacher"] != null)
+            teacher_id = Request.QueryString["teacher"];
+            if (!Page.IsPostBack)
+                getCourses();
+        }
+
+        private void getCourses()
+        {
+            string strsql = "SELECT  course.course_name ,  course.course_id, students.student_id, students.student_name from  course, select_course, students where select_course.course_id in (select course.course_id from course where course.course_teacher = " + teacher_id + ") and select_course.course_id = course.course_id and select_course.student_id = students.student_id ";
+            DataTable dt = baseclass1.ReadTable(strsql);
+            PagedDataSource objPds = new PagedDataSource();
+            objPds.DataSource = dt.DefaultView;
+            objPds.AllowPaging = true;
+            objPds.PageSize = 4;
+            int curpage = Convert.ToInt32(this.LabelPage.Text);
+            objPds.CurrentPageIndex = curpage - 1;
+            if (objPds.CurrentPageIndex < 0)
             {
-                id = Request.QueryString["teacher"];
+                objPds.CurrentPageIndex = 0;
+            }
+            if (objPds.PageCount == 1)
+            {
+                LinkButtonPrev.Enabled = false;
+                LinkButtonNext.Enabled = false;
+            }
+            else
+            {
+                if (curpage == 1)
+                {
+                    LinkButtonPrev.Enabled = false;
+                    LinkButtonNext.Enabled = true;
+                }
+                else if (curpage == objPds.PageCount)
+                {
+                    LinkButtonNext.Enabled = false;
+                    LinkButtonPrev.Enabled = true;
+                }
+                else
+                {
+                    LinkButtonNext.Enabled = true;
+                    LinkButtonPrev.Enabled = true;
+                }
             }
 
-            // 测试，先不验证登录
-            //if (Session[id] == null)
-            //{
-            //    Response.Write("请登录");
-            //}
+            this.LableTotalPage.Text = Convert.ToString(objPds.PageCount);
+            //  GridView1.DataNavigateUrlFields = "";
+            GridView3.DataSource = objPds;
+            GridView3.DataBind();
+        }
 
+
+
+        protected void LinkButtonFirst_Click(object sender, EventArgs e)
+        {
+            this.LabelPage.Text = "1";
+            getCourses();
+        }
+
+        protected void LinkButtonPrev_Click(object sender, EventArgs e)
+        {
+            this.LabelPage.Text = Convert.ToString(int.Parse(this.LabelPage.Text) - 1);
+            getCourses();
+        }
+
+        protected void LinkButtonNext_Click(object sender, EventArgs e)
+        {
+            this.LabelPage.Text = Convert.ToString(int.Parse(this.LabelPage.Text) + 1);
+            getCourses();
+        }
+
+        protected void LinkButtonLast_Click(object sender, EventArgs e)
+        {
+            this.LabelPage.Text = this.LabelPage.Text;
+            getCourses();
+        }
+
+        protected void Button_save_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = btn.Parent.Parent as GridViewRow;
+            string tmp_course_id = row.Cells[0].Text;//获得第一个单元格的值   
+            string tmp_student_id = row.Cells[2].Text;
+          //  TextBox ttt = (TextBox) row.Cells[3].Controls[0];
+           // string tmp_rest = row.Cells[2].Text;
+            //int tmp_rest = row.RowIndex;
+            //string input_id = "ContentPlaceHolder1_GridView3_Lable_grade_edit_" + tmp_rest;
+        //    ContentPlaceHolder1_GridView3_Lable_grade_edit_0.
+          //  string sb =  GridView3.DataKeys[e.RowIndex].Value.ToString();
+         
+            TextBox txt = (TextBox) row.Cells[3].FindControl("Lable_grade_edit");
+            string tmp_grade = txt.Text.ToString();
+            int grade = Convert.ToInt32(tmp_grade);
             string connection = "server=localhost;user id=root;password=7723;database=collect_course; pooling=true;";
             MySqlConnection conn = new MySqlConnection(connection);
-            string sqlQuery = "SELECT  course.course_name ,  students.student_name from  course, select_course, students where select_course.course_id in (select course.course_id from course where course.course_teacher = " + id + ")  and select_course.course_id = course.course_id and select_course.student_id = students.student_id " ;
-            //string sqlQuery = "SELECT * from course where course.course_id not in ( select course.course_id from course, select_course where course.course_id = select_course.course_id and select_course.student_id = " + id + ")";
-            MySqlCommand comm = new MySqlCommand(sqlQuery, conn);
-            conn.Open();
-            MySqlDataReader dr = comm.ExecuteReader();
-            while (dr.Read())
-            {
-                TableRow tr = new TableRow();
-                TableCell tc1 = new TableCell();
-                TableCell tc2 = new TableCell();
-                TableCell tc3 = new TableCell();
-                TableCell tc4 = new TableCell();
-                tc1.Text = dr.GetString(0);
-                tc2.Text = dr.GetString(1);
-                TextBox textbox = new TextBox();
-                Button btn = new Button();
-                
-                btn.Text = "确定录入";
-                //btn.Click = "";
-                tc3.Controls.Add(textbox);
-                tc4.Controls.Add(btn);
-                //将单元格添加到行中
-                tr.Cells.Add(tc1);
-                tr.Cells.Add(tc2);
-                tr.Cells.Add(tc3);
-                tr.Cells.Add(tc4);
-                Add_grade_list.Rows.Add(tr);
 
-            }
-            dr.Close();
+            //string sql = "INSERT INTO course (course_id,course_name,course_grade,course_class) VALUES ('''+       ?course_id + ''',''' + ?course_name + ''','''+ ?course_teacher+ ''',''' + ?couse_grade + ''')";
+            //string sql = "INSERT INTO select_course (course_id,student_id, grade) VALUES ( '" + tmp_course_id + "','" + tmp_student_id + "','" + grade + "')";
+            string sql = "UPDATE select_course set grade = " + grade + " where course_id = " + tmp_course_id + " and student_id = " + tmp_student_id;
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.ExecuteNonQuery();
             conn.Close();
-            
+            txt.Enabled = false;
+        }
+        protected void Button_edit_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            GridViewRow row = btn.Parent.Parent as GridViewRow;
+            TextBox txt = (TextBox)row.Cells[3].FindControl("Lable_grade_edit");
+            txt.Enabled = true;
         }
     }
 }

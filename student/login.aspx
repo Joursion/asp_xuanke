@@ -13,8 +13,10 @@
          <div id="wrong_message" class="login-msg error" runat="server" visible="false">            
             <asp:Label runat="server" ID="errmsg"  Text="ddd"></asp:Label>
          </div>
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/style/img/loginback.jpg" />
         <asp:Label ID="Login_id_edit" runat="server" Text="ID"></asp:Label>
         <asp:TextBox ID="Login_id" runat="server"></asp:TextBox>
+
          <asp:Label ID="Login_pwd_edit" runat="server" Text="密码"></asp:Label>
         <asp:TextBox ID="Login_pwd" runat="server"  TextMode="Password"></asp:TextBox>
         <asp:Button ID="Login_login" runat="server" Text="学生登录" OnClick="Login_login_Click" />

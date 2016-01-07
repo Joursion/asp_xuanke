@@ -1,0 +1,38 @@
+﻿#teabackground
+{
+ 
+    background-image:url(../img/loginback.jpg);
+    width:100%;
+    height:100px;
+    top:inherit;
+}
+
+#teacher_add_course
+{
+    top:116px;
+    position:absolute;
+    left:10px;
+    font-size:large;
+}
+
+#teacher_add_grade
+{
+      top:116px;
+    position:absolute;
+     left:100px;
+    font-size:large;
+}
+
+#teacher_log_out
+{
+    position:absolute;
+    right:10px;
+}
+
+#taecher_show_name
+{
+     width:150px;
+    top:inherit;
+    color:black;
+      font-size:large;
+}

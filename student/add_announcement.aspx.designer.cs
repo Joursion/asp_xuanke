@@ -10,69 +10,51 @@
 namespace student {
     
     
-    public partial class select_course1 {
+    public partial class add_announcement {
         
         /// <summary>
-        /// GridView1 控件。
+        /// gg_show_title 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label gg_show_title;
         
         /// <summary>
-        /// LabelPage 控件。
+        /// gg_title 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelPage;
+        protected global::System.Web.UI.WebControls.TextBox gg_title;
         
         /// <summary>
-        /// LableTotalPage 控件。
+        /// gg_show_content 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LableTotalPage;
+        protected global::System.Web.UI.WebControls.Label gg_show_content;
         
         /// <summary>
-        /// LinkButtonFirst 控件。
+        /// gg_content 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonFirst;
+        protected global::System.Web.UI.WebControls.TextBox gg_content;
         
         /// <summary>
-        /// LinkButtonPrev 控件。
+        /// gg_submit 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonPrev;
-        
-        /// <summary>
-        /// LinkButtonNext 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonNext;
-        
-        /// <summary>
-        /// LinkButtonLast 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonLast;
+        protected global::System.Web.UI.WebControls.Button gg_submit;
     }
 }
